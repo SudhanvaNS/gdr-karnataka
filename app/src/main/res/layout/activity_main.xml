@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/commandInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type command like 'start a' or 'stop b'" />
+
+    <EditText
+        android:id="@+id/messageInput"
+        android:hint="Enter your message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/intervalInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter interval in minutes"
+        android:inputType="number"
+        android:layout_marginBottom="8dp" />
+    <Button
+        android:id="@+id/executeCommandButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Execute Command" />
+
+    <Button
+        android:id="@+id/exportButton"
+        android:text="Export"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No active pairs"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="#000000" />
+    <ListView
+        android:id="@+id/messageList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>
