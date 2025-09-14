@@ -18,7 +18,7 @@ public class SmsReceiver extends BroadcastReceiver {
                 SmsMessage sms = SmsMessage.createFromPdu((byte[]) pdu);
                 String sender = sms.getOriginatingAddress();
                 String msg = sms.getMessageBody();
-                if (sender != null && sender.contains(MainActivity.senderNumber)) {
+                if (MainActivity.isActiveSender(sender)) {
                     Intent i = new Intent("com.example.message.NEW_SMS");
                     i.putExtra("msg", msg);
                     context.sendBroadcast(i);
